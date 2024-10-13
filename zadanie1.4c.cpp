@@ -12,7 +12,7 @@ int main()
     cin >> n[1];
     cout << "\n" << "Podaj trzecia liczbe: ";
     cin >> n[2];
-    while (((n[0] >> n[1]) && (n[1] >> n[2])) == false) {
+    do {
         for (int i = 0; i < 2; i++) {
             m[i] = n[i];
             m[i + 1] = n[i + 1];
@@ -22,6 +22,7 @@ int main()
             }
         }
     }
+    while (((n[0] >= n[1]) && (n[1] >= n[2])) == false);
     cout << "\n" << n[0];
     
     return 0;
